@@ -1,0 +1,84 @@
+
+.sectionContent {
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 60px auto;
+    padding: 10px 40px;
+
+
+}
+
+.sectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.titleSection {
+    color: #373737;
+    margin: 0;
+    padding: 0;
+
+}
+
+.moviesGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* ровно 6 колонок */
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+.loading, .error {
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    color: #666;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.error {
+    color: #d32f2f;
+    background: rgba(211, 47, 47, 0.1);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 85, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #ff5500;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Темная тема */
+:global(.dark-theme) .loading {
+    color: #aaa;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+:global(.dark-theme) .error {
+    color: #ff9999;
+    background: rgba(255, 107, 107, 0.2);
+}

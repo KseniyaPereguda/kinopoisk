@@ -1,0 +1,65 @@
+/* MovieDetailsSkeleton.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.backButton {
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.poster {
+    border-radius: 12px;
+}
+
+.info {
+    flex: 1;
+}
+
+.meta {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.genres {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.castSection {
+    margin-top: 40px;
+}
+
+.castGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.castCard {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster {
+        width: 250px;
+        height: 375px;
+    }
+}

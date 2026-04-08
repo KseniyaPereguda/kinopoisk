@@ -1,0 +1,86 @@
+
+.search {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.inputWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.input {
+    padding: 12px 35px 12px 20px;
+    border-radius: 30px;
+    min-width: 400px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: white;
+    color: rgb(35, 35, 35);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input::placeholder {
+    color: rgba(117, 117, 117, 0.7);
+}
+
+/* Отключаем нативный крестик в Webkit браузерах (Chrome, Safari, Edge) */
+.input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.clearButton {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.clearButton:hover {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Для темной темы */
+.dark .input {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .clearButton {
+    color: #ccc;
+}
+
+.dark .clearButton:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}

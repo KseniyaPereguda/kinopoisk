@@ -1,0 +1,15 @@
+.footer {
+    padding: 20px 50px;
+    background-color: #e6e6e6;
+    text-align: center;
+}
+
+:global(body.dark-theme) .footer {
+    background-color: #1e1e1e;
+    color: #b0b0b0;
+    border-top: 1px solid #333;
+}
+
+:global(body.light-theme) .footer {
+    border-top: 1px solid #ccc;
+}

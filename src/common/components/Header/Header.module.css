@@ -1,0 +1,85 @@
+.container {
+    background-color: #f6f6f6;
+    padding: 15px 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+/* Темная тема для header */
+:global(body.dark-theme) .container {
+    background-color: #1e1e1e;
+}
+
+:global(body.light-theme) .container {
+    background-color: #efefef;
+    border-bottom: 1px solid #ccc;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.list a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+}
+
+/* Текст ссылок в темной теме */
+:global(body.dark-theme) .list a {
+    color: white;
+}
+
+.list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #ccc;
+}
+
+/* Линия в темной теме */
+:global(body.dark-theme) .list li:not(:last-child)::after {
+    background-color: #555;
+}
+
+.list li {
+    position: relative;
+
+}
+.list a:hover {
+    color: #0751f6;
+}
+
+/* Ховер в темной теме */
+:global(body.dark-theme) .list a:hover {
+    color: #90caf9;
+}
+
+.activeLink {
+    background-color: rgba(170, 170, 170, 0.4);
+}
+
+/* Активная ссылка в темной теме */
+:global(body.dark-theme) .activeLink {
+    background-color: rgba(255, 255, 255, 0.15);
+}

@@ -1,0 +1,150 @@
+/* Контейнер страницы */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Заголовок */
+/*.header {*/
+/*    text-align: center;*/
+/*    margin-bottom: 40px;*/
+/*}*/
+
+/*.header h1 {*/
+/*    font-size: 2.5rem;*/
+/*    margin-bottom: 10px;*/
+/*    background: linear-gradient(135deg, #ff4d4d, #ff8c8c);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    background-clip: text;*/
+/*}*/
+
+.header {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.count {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Сетка фильмов */
+.moviesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+/* Пустое состояние */
+.empty {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 500px;
+    margin: 80px auto;
+    background: #f9f9f9;
+    border-radius: 20px;
+}
+
+.emptyIcon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.empty p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.browseButton {
+    background: #3f5d9d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.browseButton:hover {
+    background: #2c4480;
+    transform: translateY(-2px);
+}
+
+/* Загрузка */
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Ошибка */
+.error {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+    color: #f44336;
+}
+
+/* Темная тема */
+:global(.dark-theme) .empty {
+    background: #1e1e1e;
+}
+
+:global(.dark-theme) .empty h2 {
+    color: #ffffff;
+}
+
+:global(.dark-theme) .empty p {
+    color: #b0b0b0;
+}
+
+:global(.dark-theme) .count {
+    color: #b0b0b0;
+}
+
+:global(.dark-theme) .loading {
+    color: #b0b0b0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .moviesGrid {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .empty {
+        margin: 40px 20px;
+        padding: 40px 20px;
+    }
+
+    .empty h2 {
+        font-size: 1.4rem;
+    }
+
+    .emptyIcon {
+        font-size: 60px;
+    }
+}

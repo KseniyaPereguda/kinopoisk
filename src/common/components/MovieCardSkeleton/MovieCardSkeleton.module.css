@@ -1,0 +1,13 @@
+/* MovieCardSkeleton.module.css */
+.skeletonCard {
+    width: 100%;
+}
+
+.skeletonPoster {
+    border-radius: 8px;
+    aspect-ratio: 2 / 3;
+}
+
+.skeletonTitle {
+    margin-top: 8px;
+}

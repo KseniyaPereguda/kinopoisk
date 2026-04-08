@@ -1,0 +1,12 @@
+.logoLink {
+    display: inline-block; /* Чтобы ссылка занимала размер картинки */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    min-width: 150px;
+    height: auto;
+    display: block;
+}

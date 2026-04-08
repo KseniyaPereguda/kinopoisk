@@ -1,0 +1,71 @@
+/* features/MovieDetails/components/MovieCast.module.css */
+
+.castSection {
+    margin-top: 40px;
+}
+
+.castSection h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.castList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.castCard {
+    background: var(--card-bg, #fff);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.castCard:hover {
+    transform: translateY(-5px);
+}
+
+.actorImage {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.actorInfo {
+    padding: 10px;
+}
+
+.actorName {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: var(--text-primary, #333);
+}
+
+.characterName {
+    font-size: 12px;
+    color: var(--text-secondary, #666);
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary, #666);
+}
+
+@media (max-width: 768px) {
+    .castList {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .actorName {
+        font-size: 12px;
+    }
+
+    .characterName {
+        font-size: 10px;
+    }
+}
