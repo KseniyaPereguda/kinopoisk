@@ -1,6 +1,6 @@
 .logoLink {
-    display: inline-block; /* Чтобы ссылка занимала размер картинки */
-    text-decoration: none; /* Убрать подчеркивание */
+    display: inline-block;
+    text-decoration: none;
 }
 
 .logo {

@@ -39,8 +39,6 @@ export type GenresResponse = {
     }[];
 }
 
-// common/types/movie.ts
-
 export type CastMember = {
     adult: boolean;
     gender: number;

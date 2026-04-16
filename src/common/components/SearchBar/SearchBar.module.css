@@ -30,7 +30,6 @@
     color: rgba(117, 117, 117, 0.7);
 }
 
-/* Отключаем нативный крестик в Webkit браузерах (Chrome, Safari, Edge) */
 .input::-webkit-search-cancel-button {
     display: none;
 }
@@ -65,7 +64,6 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Для темной темы */
 .dark .input {
     background-color: #2d2d2d;
     color: #ffffff;

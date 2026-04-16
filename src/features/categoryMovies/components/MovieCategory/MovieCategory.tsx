@@ -4,6 +4,7 @@ import s from './MovieCategory.module.css';
 import type { SerializedError } from '@reduxjs/toolkit';
 import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import {MovieCard} from '@/features/categoryMovies/components/ MovieCard/ MovieCard.tsx';
+import {MoviesGridSkeleton} from '@/common/components/Skeletons/MoviesGridSkeleton.tsx';
 
 type MovieCategoryProps = {
     title: string;
@@ -21,7 +22,6 @@ export const MovieCategory = ({
                                   error
                               }: MovieCategoryProps) => {
 
-    // Если грузится - показываем загрузку
     if (isLoading) {
         return (
             <div className={s.sectionContent}>
@@ -29,10 +29,7 @@ export const MovieCategory = ({
                     <h2 className={s.titleSection}>{title}</h2>
                     <ViewMoreButton onClick={onViewMore}>View more</ViewMoreButton>
                 </div>
-                <div className={s.loading}>
-                    <div className={s.spinner}></div>
-                    <p>Loading {title}...</p>
-                </div>
+                <MoviesGridSkeleton count={10} />
             </div>
         );
     }

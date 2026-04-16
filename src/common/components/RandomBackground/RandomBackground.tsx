@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {useGetPopularMoviesQuery} from '../../../features/categoryMovies/api/movieApi.ts';
-import styles from './RandomBackground.module.css';
+import React, {useEffect, useRef, useState} from 'react';
 
-// Базовый URL для изображений TMDB
+import styles from './RandomBackground.module.css';
+import {useGetPopularMoviesQuery} from '@/features/categoryMovies/api/movieApi.ts';
+
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 type RandomBackgroundProps = {
@@ -15,21 +15,25 @@ export const RandomBackground: React.FC<RandomBackgroundProps> = ({children}) =>
 
     const [backgroundUrl, setBackgroundUrl] = useState('');
 
+    const isBackgroundSet = useRef(false);
+
     useEffect(() => {
+        const setRandomBackground = () => {
+            if (!data?.results || data.results.length === 0) return;
+            if (isBackgroundSet.current) return;
 
-        if (!data?.results || data.results.length === 0) return;
+            const moviesWithBackdrop = data.results.filter(movie => movie.backdrop_path);
+            if (moviesWithBackdrop.length === 0) return;
 
-        if (backgroundUrl) return;
-
-        const moviesWithBackdrop = data.results.filter(movie => movie.backdrop_path);
-        if (moviesWithBackdrop.length > 0) {
             const randomIndex = Math.floor(Math.random() * moviesWithBackdrop.length);
             const randomMovie = moviesWithBackdrop[randomIndex];
 
             setBackgroundUrl(`${IMAGE_BASE_URL}${randomMovie.backdrop_path}`);
-        }
+            isBackgroundSet.current = true;
+        };
 
-    }, [data, backgroundUrl]);
+        setRandomBackground();
+    }, [data]);
 
 
     if (isLoading) {

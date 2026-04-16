@@ -2,7 +2,7 @@ import s from './MoviesGridSkeleton.module.css';
 import {MovieCardSkeleton} from '@/common/components/MovieCardSkeleton/MovieCardSkeleton.tsx';
 
 type MoviesGridSkeletonProps = {
-    count?: number;  // количество карточек
+    count?: number;
 }
 
 export const MoviesGridSkeleton = ({count = 10}: MoviesGridSkeletonProps) => {

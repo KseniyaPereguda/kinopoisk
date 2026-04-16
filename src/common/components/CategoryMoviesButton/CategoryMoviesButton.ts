@@ -32,14 +32,11 @@ export const CategoryMoviesButton = styled(Button)<CategoryMoviesButtonProps>(({
         transition: "all 0.1s ease",
     },
 
-    // ========== ТЕМНАЯ ТЕМА ==========
     [theme.breakpoints.up('xs')]: {
-        // Используем theme.palette.mode для определения темы
     },
 
     ...(theme.palette.mode === 'dark' && {
-        // Неактивная кнопка в темной теме
-        color: isActive ? "#121212" : "#ffffff",  // 👈 Белый текст для неактивных
+        color: isActive ? "#121212" : "#ffffff",
         backgroundColor: isActive ? "#90caf9" : "transparent",
         border: isActive ? "1px solid #90caf9" : "1px solid #555555",
 

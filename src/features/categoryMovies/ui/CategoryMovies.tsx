@@ -85,7 +85,7 @@ export const CategoryMovies = () => {
     const totalResults = data?.total_results || 0;
 
     const handleCategoryChange = (newCategory: MovieCategory) => {
-        setCurrentPage(1); // Сбрасываем страницу
+        setCurrentPage(1);
         navigate(`/category/${newCategory}`);
     };
 

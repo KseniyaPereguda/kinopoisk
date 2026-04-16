@@ -1,4 +1,3 @@
-// Список эндпоинтов для исключения из глобального индикатора
 import {useSelector} from 'react-redux';
 import type {RootState} from '@/app/model/store.ts';
 

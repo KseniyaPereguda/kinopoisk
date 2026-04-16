@@ -9,7 +9,7 @@ export const ViewMoreButton = styled(Button)(() => ({
     textTransform: "none",
     margin: "0 10px",
     padding: "8px 16px",
-    color: "#676767",
+    color: "#bdbdbd",
     border: "1px solid gray",
 
     '&:hover': {

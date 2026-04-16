@@ -1,29 +1,22 @@
-// src/features/MovieDetails/components/MovieDetailsSkeleton.tsx
 import Skeleton from '@mui/material/Skeleton';
 import s from './MovieDetailsSkeleton.module.css';
 
 export const MovieDetailsSkeleton = () => {
     return (
         <div className={s.container}>
-            {/* Кнопка назад */}
             <Skeleton
                 variant="rectangular"
                 width={80}
                 height={36}
                 className={s.backButton}
             />
-
-            {/* Основной контент */}
             <div className={s.content}>
-                {/* Постер */}
                 <Skeleton
                     variant="rectangular"
                     width={350}
                     height={525}
                     className={s.poster}
                 />
-
-                {/* Информация */}
                 <div className={s.info}>
                     <Skeleton variant="text" width="70%" height={50} />
                     <div className={s.meta}>
@@ -41,8 +34,6 @@ export const MovieDetailsSkeleton = () => {
                     <Skeleton variant="text" width="90%" height={20} />
                 </div>
             </div>
-
-            {/* Секция актеров */}
             <div className={s.castSection}>
                 <Skeleton variant="text" width={200} height={40} />
                 <div className={s.castGrid}>

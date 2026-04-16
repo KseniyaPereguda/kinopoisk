@@ -11,7 +11,6 @@
     width: 100%;
 }
 
-/* Темная тема для header */
 :global(body.dark-theme) .container {
     background-color: #1e1e1e;
 }
@@ -41,7 +40,6 @@
 
 }
 
-/* Текст ссылок в темной теме */
 :global(body.dark-theme) .list a {
     color: white;
 }
@@ -57,7 +55,6 @@
     background-color: #ccc;
 }
 
-/* Линия в темной теме */
 :global(body.dark-theme) .list li:not(:last-child)::after {
     background-color: #555;
 }
@@ -70,7 +67,6 @@
     color: #0751f6;
 }
 
-/* Ховер в темной теме */
 :global(body.dark-theme) .list a:hover {
     color: #90caf9;
 }
@@ -79,7 +75,6 @@
     background-color: rgba(170, 170, 170, 0.4);
 }
 
-/* Активная ссылка в темной теме */
 :global(body.dark-theme) .activeLink {
     background-color: rgba(255, 255, 255, 0.15);
 }

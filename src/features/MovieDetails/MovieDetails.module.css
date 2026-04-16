@@ -59,3 +59,12 @@
     text-align: center;
     padding: 60px;
 }
+
+:global(body.dark-theme) .backButton {
+    background-color: #858585;
+}
+
+:global(body.dark-theme) .genre {
+    background-color: #858585;
+    color: black;
+}

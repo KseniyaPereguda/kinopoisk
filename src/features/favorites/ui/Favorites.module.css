@@ -1,25 +1,9 @@
-/* Контейнер страницы */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
     min-height: calc(100vh - 200px);
 }
-
-/* Заголовок */
-/*.header {*/
-/*    text-align: center;*/
-/*    margin-bottom: 40px;*/
-/*}*/
-
-/*.header h1 {*/
-/*    font-size: 2.5rem;*/
-/*    margin-bottom: 10px;*/
-/*    background: linear-gradient(135deg, #ff4d4d, #ff8c8c);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*    background-clip: text;*/
-/*}*/
 
 .header {
     margin-bottom: 20px;
@@ -32,14 +16,12 @@
     margin-bottom: 30px;
 }
 
-/* Сетка фильмов */
 .moviesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 25px;
 }
 
-/* Пустое состояние */
 .empty {
     text-align: center;
     padding: 80px 20px;
@@ -83,7 +65,6 @@
     transform: translateY(-2px);
 }
 
-/* Загрузка */
 .loading {
     text-align: center;
     padding: 60px 20px;
@@ -91,7 +72,6 @@
     color: #666;
 }
 
-/* Ошибка */
 .error {
     text-align: center;
     padding: 60px 20px;
@@ -99,7 +79,6 @@
     color: #f44336;
 }
 
-/* Темная тема */
 :global(.dark-theme) .empty {
     background: #1e1e1e;
 }
@@ -120,7 +99,6 @@
     color: #b0b0b0;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .container {
         padding: 20px;

@@ -1,4 +1,3 @@
-// common/hooks/useFavorites.ts
 import { useState } from 'react';
 import type { FavoriteMovie } from '@/common/types/favorite';
 

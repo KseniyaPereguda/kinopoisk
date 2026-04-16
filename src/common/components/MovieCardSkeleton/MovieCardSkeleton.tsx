@@ -1,11 +1,9 @@
-// src/features/categoryMovies/components/MovieCardSkeleton/MovieCardSkeleton.tsx
 import Skeleton from '@mui/material/Skeleton';
 import s from './MovieCardSkeleton.module.css';
 
 export const MovieCardSkeleton = () => {
     return (
         <div className={s.skeletonCard}>
-            {/* Постер */}
             <Skeleton
                 variant="rectangular"
                 width="100%"
@@ -13,7 +11,6 @@ export const MovieCardSkeleton = () => {
                 animation="wave"
                 className={s.skeletonPoster}
             />
-            {/* Название */}
             <Skeleton
                 variant="text"
                 width="90%"
@@ -21,7 +18,6 @@ export const MovieCardSkeleton = () => {
                 animation="wave"
                 className={s.skeletonTitle}
             />
-            {/* Рейтинг */}
             <Skeleton
                 variant="text"
                 width="40%"

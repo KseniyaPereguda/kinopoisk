@@ -1,5 +1,3 @@
-// features/MovieDetails/components/MovieCast.tsx
-
 import s from './MovieCast.module.css';
 import { useGetMovieActorsQuery } from '@/features/categoryMovies/api/movieApi.ts';
 

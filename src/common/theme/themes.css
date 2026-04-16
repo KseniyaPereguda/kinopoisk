@@ -1,6 +1,4 @@
-/* src/common/styles/themes.css */
 
-/* Светлая тема */
 body.light-theme {
     --bg-primary: #f6f6f6;
     --bg-secondary: #f8f9fa;
@@ -22,7 +20,7 @@ body.light-theme {
     --rating-bg: rgba(0, 0, 0, 0.8);
 }
 
-/* Темная тема */
+
 body.dark-theme {
     --bg-primary: #121212;
     --bg-secondary: #1e1e1e;

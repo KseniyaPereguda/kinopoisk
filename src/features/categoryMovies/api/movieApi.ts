@@ -20,7 +20,6 @@ export const movieApi = baseApi.injectEndpoints({
                 url: '/movie/top_rated',
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                     page: page,
                 },
             }),
@@ -32,7 +31,6 @@ export const movieApi = baseApi.injectEndpoints({
                 url: '/movie/upcoming',
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                     page: page,
                 },
             }),
@@ -44,7 +42,6 @@ export const movieApi = baseApi.injectEndpoints({
                 url: '/movie/now_playing',
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                     page: page,
                 },
             }),
@@ -58,7 +55,6 @@ export const movieApi = baseApi.injectEndpoints({
                 params: {
                     query: query,
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                     page: page,
                 },
             }),
@@ -71,7 +67,6 @@ export const movieApi = baseApi.injectEndpoints({
                 url: `/movie/${movieId}`,
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                 },
 
             }),
@@ -85,7 +80,6 @@ export const movieApi = baseApi.injectEndpoints({
 
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                 },
 
             }),
@@ -98,7 +92,6 @@ export const movieApi = baseApi.injectEndpoints({
 
                 params: {
                     api_key: import.meta.env.VITE_API_KEY,
-                    // language: 'ru-RU',
                 },
 
             }),

@@ -27,7 +27,7 @@
 
 .moviesGrid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* ровно 6 колонок */
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     margin-top: 30px;
     width: 100%;
@@ -72,7 +72,6 @@
     }
 }
 
-/* Темная тема */
 :global(.dark-theme) .loading {
     color: #aaa;
     background: rgba(255, 255, 255, 0.05);
@@ -81,4 +80,12 @@
 :global(.dark-theme) .error {
     color: #ff9999;
     background: rgba(255, 107, 107, 0.2);
+}
+
+:global(body.dark-theme) .titleSection {
+    color: #bdbdbd;
+}
+
+:global(body.dark-theme) .titleSection {
+    color: #bdbdbd;
 }
